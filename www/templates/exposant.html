@@ -1,0 +1,66 @@
+
+  <ion-header-bar align-title="left" class="bar-positive">
+
+<ion-nav-buttons side="primary">
+  <button class="button" ng-click="doSomething()">
+left  </button>
+</ion-nav-buttons>
+
+  <h1 class="title">{{t_intervenant.si_nom}}</h1>
+
+</ion-header-bar>
+  <ion-content padding="false" class="has-header">
+
+            <div class="hero " style="background:   linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url('img/business.jpg') no-repeat center; background-size:cover;">
+                <div class="content">
+                    <h3><a  class="light">{{t_intervenant.si_nom}}</a></h3>
+                    <h4>Fournisseur</h4>
+                </div>
+            </div>
+
+            <div class="button-bar tabs-positive ">
+                <button ng-click="tabSelect('presentation')" class="button button-dark waves-effect waves-button waves-classic icon ion-eye"></button>
+                <button ng-click="tabSelect('contact')" class="button button-dark waves-effect waves-button waves-classic icon ion-ios-contact"> </ion-icon>
+
+</button>
+                <button ng-click="tabSelect('map')"  class="button button-dark waves-effect waves-button waves-classic icon ion-map"></button>
+
+
+
+
+
+            </div>
+
+
+  <!-- Icons on top of text -->
+
+            <div class="scroll padding">
+
+
+
+                <div class="tabsSelect-content active" id="presentation">
+                    <h4 class="positive content padding">Présentation</h4>
+                   <img class="avatar-img" src="https://www.hexaplus.fr/{{t_intervenant.int_image}}"/><br/>
+
+                    {{t_intervenant.si_presentation}}
+                </div>
+                <ion-nav-view class="tabsSelect-content " id="contact" animation="slide-left-right">
+                                        <h4 class="positive content padding">Contact</h4>
+                                    {{t_intervenant.si_contact}}<br/>
+                                    {{t_intervenant.si_email}}<br/>
+                                                <a  class="button button-block button-positive icon icon-left ion-email" ng-href='mailto:{{t_intervenant.si_email}}?subject=Contact salon Barcelone 2018&body=Bonjour, ' >Envoyer un mail</a>
+
+                </ion-nav-view>
+
+              <div class="tabsSelect-content active" id="map">
+                    <h4 class="positive content padding">Position au salon</h4>
+    .
+                </div>
+
+
+
+            </div>
+  </ion-content>
