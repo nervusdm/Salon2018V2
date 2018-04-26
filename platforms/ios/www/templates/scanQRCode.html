@@ -1,6 +1,6 @@
 <ion-header-bar align-title="left" class="bar-positive">
 
-  <h1 class="title">Scan Qr Code</h1>
+  <h1 class="title">{{'SCAN_QRCODE' | translate}}</h1>
 
 </ion-header-bar>
 
@@ -15,10 +15,9 @@
     			<i class="material-icons" onClick="favorite(this);">
     			QrCode</i>
     		</div><div class="cardContent">
-    			<button class="cardContentButton button-positive" ng-click="scanBarcode()">Scan</button>
-    			<p class="cardContentName">Scanner un QrCode</p>
-    			<p class="cardContentJob">Scannez les QRcode des fournisseurs que vous allez visiter pour enregistrer votre visite et obtenir des informations complémentaires.<br/>
-            <button id="scanQRCode-button4" ng-click="scanBarcode()" class="button button-positive button-block">Scanner</button>
+    			<p class="cardContentName">{{'SCAN_QRCODE' | translate}}</p>
+    			<p class="cardContentJob">{{'INFO_QRCODE' | translate}}.<br/>
+            <button id="scanQRCode-button4" ng-click="scanBarcode()" class="button button-positive button-block">{{'Scanner' | translate}}</button>
 
 </p>
     			<div class="titleSocial"></div>

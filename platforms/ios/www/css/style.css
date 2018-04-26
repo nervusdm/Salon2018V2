@@ -5,7 +5,7 @@
 {
 
   background-color:#559EF2;
-   background:url(../img/fond.jpg) no-repeat center center fixed;
+   background:#9CCEF3 no-repeat center center fixed;
   background-size: cover; ;
   padding-top:5vh;
 color:white;
@@ -52,11 +52,23 @@ body
 {
 
 }
-.item-md-label input
+.item-md-label input, select.salon
 {
   background-color:#124193 !important;
   color:white;
+  width:100%;
+  max-width: 100% !important;
+  color:white;
 }
+select.salon { color:white !important; min-height: 30px; 
+    padding-left: 0;
+    padding-right: 0;
+    width: initial; }
+.list-dropdown
+{
+  margin: 0 12px;
+}
+
 .item-md-label input:focus ~ .input-label, .item-md-label input.used ~ .input-label
 {
 
@@ -78,10 +90,10 @@ color:#124193 !important;
 .card .cardContent {
   position: relative;
   padding: 5%;
-  padding-top: 15%;
-  margin-top: -10%;
+
   padding-bottom: 8%;
   overflow: hidden;
+      margin-top: 5%;
 }
 .card .cardContent .titleSocial {
   opacity: 0;
@@ -226,6 +238,14 @@ color:#124193 !important;
 .card .card_image.is-active {
   z-index: 4;
 }
+body .card .image
+{
+  margin-top: 0 !important;
+}
+.card_image {
+    max-height: 60vw;
+    overflow: hidden;
+}
 @-webkit-keyframes ejemplo {
   100% {
     -webkit-transform: scale(12);
@@ -244,3 +264,4 @@ color:#124193 !important;
     transform: scale(12);
   }
 }
+.flag { height:20Px; }

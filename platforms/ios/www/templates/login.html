@@ -1,23 +1,33 @@
-<ion-view hide-nav-bar="true" left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" class="full"> 
-
-    <div class="ionic login animate-pan-in-left" >
+<ion-view hide-nav-bar="true" left-buttons="leftButtons" right-buttons="rightButtons" hide-back-button="true" class="full" >
+<ion-content>
+    <div class="ionic login animate-pan-in-left" overflow-scroll="false" >
         <div class="hero no-header flat">
             <div class="content">
-                <img class="logo" src="img/logo-salon.jpg"/>
+                <img class="logo" src="img/logo-salon.png"/>
                 <h1>Hexa Salon 2018</h1>
             </div>
         </div>
-        <div class="list">
-            <ion-md-input placeholder="Nom / Prénom" highlight-color="balanced" ng-model="account.nom" type="text"></ion-md-input>
-            <ion-md-input ng-model="account.email" placeholder="Email" highlight-color="energized" type="text"></ion-md-input>
-            <ion-md-input required ng-model="account.password" placeholder="Password" highlight-color="energized" type="password"></ion-md-input>
+        <div class="list" style='margin-bottom:0'>
+            <ion-md-input placeholder="{{'Nom / Prénom' | translate }}" highlight-color="balanced" ng-model="account.nom" type="text"></ion-md-input>
+            <ion-md-input ng-model="account.email" placeholder="{{'Email' | translate }}" highlight-color="energized" type="text"></ion-md-input>
+            <ion-md-input required ng-model="account.password" placeholder="{{'Mot de passe' | translate }}" highlight-color="energized" type="password"></ion-md-input>
+            <br/>
+<div class="list-dropdown">
 
+    <select class='salon' placeholder="{{'Sélectionnez votre magasin' | translate }}" ng-model="account.magasin" ng-options="(item.dpt + ' ' + item.nom)  for item in magasin.intervenant | filter:{'pays':account.lang} | orderBy :dpt  track by item.id">
+                <option value="" disabled selected hidden>{{'Sélectionnez votre magasin' | translate }}</option>
+
+    </select>
+</div>
+<br/>
+<img src="img/flag_fr.jpg" ng-click="setLang('fr')" class="flag"/>
+<img src="img/flag_es.png" ng-click="setLang('es')"  class="flag"/>
         </div>
         <div class="padding">
-            <button ng-click="register()" class="button button-block button-positive waves-effect waves-button waves-light">S'inscrire</button>
+            <button ng-click="register()" class="button button-block button-positive waves-effect waves-button waves-light">{{"S'inscrire" | translate }}</button>
         </div>
         <div class="button-bar">
-            <a href='#/connection' class="button button-small button-outline button-assertive light-bg icon-left  waves-effect waves-button waves-light">Se reconnecter</a>
+            <a href='#/connection' class="button button-small button-outline button-assertive light-bg icon-left  waves-effect waves-button waves-light">{{"Se reconnecter" | translate }}</a>
         </div>
     </div>
 
@@ -25,5 +35,5 @@
 
 
 
-
+</ion-content>
 </ion>

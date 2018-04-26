@@ -17,6 +17,58 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
 
 })
 
+
+.config(['$translateProvider', function ($translateProvider) {
+  $translateProvider.translations('es', {
+    'TITLE': 'Hello',
+    'FOO': 'This is a paragraph',
+    "S'inscrire":"Regístrese",
+    "Email":"Correo electrónico",
+    "Mot de passe":"Contraseña",
+    "Nom / Prénom":"Apellido / Nombre",
+    "Se reconnecter":"Reconectar",
+    'INFO_QRCODE':"Escanear los QRcodes de los proveedores que visitará para registrar su visita y obtener información adicional",
+    "SCAN_QRCODE":"Escanear un QrCode",
+    "Scanner":"Escáner",
+    "Les exposants":"Los expositores",
+    "Exposants":"Expositores",
+    "Fournisseur":"Proveedor",
+    'INFO_EXPOSANT':"Aquí está la lista de proveedores presentes en la feria. Haga clic en uno de ellos para obtener más información. Los proveedores que ha visitado aparecerán marcados",
+    'Position au salon':"Posición en la feria",
+    'Envoyer un mail':'Enviar un correo electrónico',
+    'Présentation':'Presentación',
+    'Contacto':'Contacto',
+    'Informations':'Información',
+    'Infos':'Información',
+    "Informations générales":'Informaciones generales',
+    "INFO_PRATIQUE":"Aquí encontrará información práctica sobre la exposición.",
+    "LOADING":"Cargando información.... Se requiere una conexión a Internet...",
+    "Compte":"Cuenta",
+    "Mon compte":"Mi Cuenta",
+    "INFO_COMPTE":"Contiene información sobre su cuenta de aplicación de salón de belleza",
+    "N° visiteur":"Visitante no.",
+    "Se déconnecter":"Desconectar",
+    "Re-connection":"Reconectar",
+    'Sélectionnez votre magasin':'Seleccione su tienda',
+    'Prenez en photo le QR Code du fournisseur':"Tomar una foto del Código QR dado por el proveedor",
+    "Succès":"Éxito"
+  });
+ 
+
+
+  $translateProvider.translations('fr', {
+    'TITLE': 'Hallo',
+    'INFO_QRCODE': "Scannez les QRcode des fournisseurs que vous allez visiter pour enregistrer votre visite et obtenir des informations complémentaires",
+    "SCAN_QRCODE":"Scanner un QrCode",
+    "INFO_EXPOSANT":"Voici la liste des fournisseurs présents sur le salon. Cliquez sur l'un d'eux pour avoir plus d'information. Les fournisseurs que vous avez visités apparaîtront cochés",
+    "INFO_PRATIQUE":"Trouvez ici les informations pratiques du salon",
+    "LOADING":"Chargement des informations... Une connection Internet est requise..",
+    "INFO_COMPTE":"Contient les informations sur votre compte d'application salon",
+  });
+ 
+  $translateProvider.preferredLanguage('fr');
+}])
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

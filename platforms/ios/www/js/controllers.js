@@ -1,9 +1,9 @@
-angular.module('app.controllers', ['ngCordova'])
+angular.module('app.controllers', ['ngCordova','pascalprecht.translate'])
 
 .controller('scanQRCodeCtrl',  // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope,$state,$timeout, $stateParams,$http,$cordovaBarcodeScanner,$ionicPopup,intervenant,$window  ) {
+function ($scope,$state,$timeout, $stateParams,$http,$cordovaBarcodeScanner,$ionicPopup,intervenant,$window,$translate,$filter  ) {
 
 /*
 cordova.plugins.diagnostic.requestCameraRollAuthorization(function(granted){
@@ -20,6 +20,10 @@ alert("cool")
 
 
 $scope.intervenants = intervenant.intervenant;
+//Keyboard.close();
+
+
+var translate = $filter('translate');
 
 $scope.scanBarcode = function($scope)
 {
@@ -42,8 +46,8 @@ $cordovaBarcodeScanner.scan().then(
       {
 
         var alertPopup = $ionicPopup.alert({
-         title: 'Succès',
-         template: "Visite enregistrée"
+         title: translate("Succès"),
+         template: translate("Visite enregistrée")
        });
 
         alertPopup.then(function(res) {
@@ -63,14 +67,14 @@ $cordovaBarcodeScanner.scan().then(
     });
   },
   function (error) {
-    alert("Erreur lors du scan: " + error);
+    alert(translate("Erreur") + error);
   },
   {
           preferFrontCamera : false, // iOS and Android
           showFlipCameraButton : true, // iOS and Android
           showTorchButton : true, // iOS and Android
           torchOn: false, // Android, launch with the torch switched on (if available)
-          prompt : "Prenez en photo le QR Code du fournisseur.. ", // Android
+          prompt : translate("Prenez en photo le QR Code du fournisseur"), // Android
           resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
           formats : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
           disableAnimations : true, // iOS
@@ -121,26 +125,56 @@ angular.element(document.getElementById(id)).addClass('active slide-left-right')
 
 }])
 
-.controller('cloudTabDefaultPageCtrl', ['$scope', '$stateParams','info_salon', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('cloudTabDefaultPageCtrl', ['$scope', '$stateParams','info_salon','$translate','$rootScope','$location','sessionService','login', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams,info_salon) {
+function ($scope, $stateParams,info_salon,$translate,$rootScope,$location,sessionService,login) {
+
+$scope.salon = info_salon;
 info_salon.loadData().then(function()
 {
-  alert('lol');
 });
 
-}])
-.controller('loginCtrl',['$rootScope','$scope','$stateParams','login','$http', '$location','login',
-function($rootScope,$scope,$stateParams,login,$http, $location,login)
+$scope.setLang = function(lang)
 {
+    $translate.use(lang);
+    login.setLang(lang);
 
+}
+$scope.logout= function()
+{
+  $rootScope.globals = false;
+  sessionService.set("globalsUser",{});
+
+  $location.path('/page1/connection/');
+
+}
+
+
+}])
+.controller('loginCtrl',['$rootScope','$scope','$stateParams','login','$http', '$location','login','magasin','$translate',
+function($rootScope,$scope,$stateParams,login,$http, $location,login,magasin,$translate)
+{
+$scope.account = {};
+$scope.magasin = magasin;
+$scope.account.lang = 'fr'
+
+magasin.loadData().then(function()
+{
+});
 
 login.loadLogin();
+login.loadLang();
 if ($rootScope.globals && $rootScope.globals.user)
 {
 $location.path('/page1/scan');
-console.log($rootScope.globals)
+console.log($rootScope.globals);
+}
+$scope.setLang = function(lang)
+{
+    $translate.use(lang);
+    login.setLang(lang);
+        $scope.account.lang=lang;
 }
 
 
@@ -148,7 +182,6 @@ console.log($rootScope.globals)
 $scope.login = function()
 {
 var tab= {account:$scope.account}
-
 $http.post(url_projet + '/rha/appsalon/login/',tab).then(function(response)
 {
 response = response.data;
@@ -159,7 +192,7 @@ if (response.error)
 }
 if (response.success)
 {
- login.setLogin({nom:$scope.account.nom,email:$scope.account.email,id:response.id,password:$scope.account.password,"auth":response.auth});
+ login.setLogin({nom:$scope.account.nom,email:$scope.account.email,id:response.id,password:$scope.account.password,"auth":response.auth,lang:$scope.account.lang});
 $location.path('/page1/scan');
 
 }
@@ -177,6 +210,8 @@ $scope.register = function()
 
 
   var tab= {account:$scope.account}
+  tab.account.magasin = $scope.account.magasin.id;
+
 $http.post( url_projet + '/rha/appsalon/register/',tab)
      .then(function (response) {
       response = response.data;

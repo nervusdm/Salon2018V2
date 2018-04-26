@@ -1,6 +1,6 @@
   <ion-header-bar align-title="left" class="bar-positive">
 
-  <h1 class="title">Les exposants</h1>
+  <h1 class="title">{{'Les exposants' | translate}}</h1>
 
 </ion-header-bar>
 
@@ -14,10 +14,10 @@
     <div class="card_image">
       <img src="img/business.jpg" alt="" class="image">
       <i class="material-icons" onClick="favorite(this);">
-      Exposants</i>
+      {{'Exposants' | translate}}</i>
     </div><div class="cardContent">
-      <p class="cardContentName">Les Exposants</p>
-      <p class="cardContentJob">Voici la liste des fournisseurs présents sur le salon. Cliquez sur l'un d'eux pour avoir plus d'information. Les fournisseurs que vous avez visités apparaîtront cochés.<br/>
+      <p class="cardContentName">{{'Les exposants' | translate}}</p>
+      <p class="cardContentJob">{{'INFO_EXPOSANT' | translate}}.<br/>
 
 </p>
       <div class="titleSocial"></div>
@@ -29,13 +29,13 @@
 
 </div>
 
-
-
 <ion-item-group>
     <ion-item ui-sref='tabsController.exposant({id:k.si_id})' ng-repeat="k in intervenant.intervenant | orderBy:'+si_nom'" class="item-icon-left" id="lesExposants-list-item1">
-        <i ng-if="kg.si_id" class="icon ion-android-checkbox-outline"></i>
-             <i ng-if="!kg.si_id" class="icon ion-android-checkbox-outline-blank"></i>
-    {{k.si_nom}}<em ng-if="kg.si_date_create">{{kg.si_date_create | dateToISO | date:"dd/MM HH'h'mm'"}}</ion-item>
+<span style='display:none'>{{kg=(intervenant.visite | filter:{sh_code:k.si_id})[0]}}</span>
+
+        <i ng-if="kg.sh_id" class="icon ion-android-checkbox-outline"></i>
+             <i ng-if="!kg.sh_id" class="icon ion-android-checkbox-outline-blank"></i>
+    {{k.si_nom}}<em ng-if="kg.sh_date_create"> - {{kg.sh_date_create | dateToISO | date:"dd/MM HH'h'mm'"}}</ion-item>
 </ion-item-group>
 
 

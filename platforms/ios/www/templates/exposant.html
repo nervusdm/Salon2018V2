@@ -17,7 +17,7 @@ left  </button>
     ), url('img/business.jpg') no-repeat center; background-size:cover;">
                 <div class="content">
                     <h3><a  class="light">{{t_intervenant.si_nom}}</a></h3>
-                    <h4>Fournisseur</h4>
+                    <h4>{{'Fournisseur' | translate}}</h4>
                 </div>
             </div>
 
@@ -42,21 +42,30 @@ left  </button>
 
 
                 <div class="tabsSelect-content active" id="presentation">
-                    <h4 class="positive content padding">Présentation</h4>
+                    <h4 class="positive content padding">{{'Présentation' | translate}}</h4>
                    <img class="avatar-img" src="https://www.hexaplus.fr/{{t_intervenant.int_image}}"/><br/>
 
+                    <div ng-if="lang=='es' && t_intervenant.si_presentation_es">
+                                          {{t_intervenant.si_presentation_es}}
+
+                    </div>
+                                        <div ng-if="lang!='es' || (lang=='es' && !t_intervenant.si_presentation_es)">
                     {{t_intervenant.si_presentation}}
+
+                    </div>
+
+
                 </div>
                 <ion-nav-view class="tabsSelect-content " id="contact" animation="slide-left-right">
-                                        <h4 class="positive content padding">Contact</h4>
+                                        <h4 class="positive content padding">{{'Contact' | translate}}</h4>
                                     {{t_intervenant.si_contact}}<br/>
                                     {{t_intervenant.si_email}}<br/>
-                                                <a  class="button button-block button-positive icon icon-left ion-email" ng-href='mailto:{{t_intervenant.si_email}}?subject=Contact salon Barcelone 2018&body=Bonjour, ' >Envoyer un mail</a>
+                                                <a  class="button button-block button-positive icon icon-left ion-email" ng-href='mailto:{{t_intervenant.si_email}}?subject=Contact salon Barcelone 2018&body=Bonjour, ' >{{'Envoyer un mail' | translate}}</a>
 
                 </ion-nav-view>
 
               <div class="tabsSelect-content active" id="map">
-                    <h4 class="positive content padding">Position au salon</h4>
+                    <h4 class="positive content padding">{{'Position au salon' | translate}}</h4>
     .
                 </div>
 

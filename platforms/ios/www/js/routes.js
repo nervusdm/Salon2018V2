@@ -28,6 +28,15 @@ angular.module('app.routes', [])
       }
     }
   })
+    .state('tabsController.account', {
+    url: '/account',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/account.html',
+        controller: 'cloudTabDefaultPageCtrl'
+      }
+    }
+  })
   .state('tabsController.exposant', {
     url: '/exposant-choix/:id',
     views: {
