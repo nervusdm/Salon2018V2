@@ -21,6 +21,9 @@
     },
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },
   "dependent_plugins": {}

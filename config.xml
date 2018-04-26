@@ -72,4 +72,5 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="^7.1.1">
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
     </plugin>
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
 </widget>
