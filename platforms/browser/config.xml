@@ -19,4 +19,5 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>Scan des QRCODE pour le salon.</string>
     </edit-config>
+    <preference name="cordova.plugins.diagnostic.modules" value="CAMERA EXTERNAL_STORAGE" />
 </widget>

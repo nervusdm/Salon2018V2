@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
-    },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
@@ -20,6 +17,9 @@
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
     "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
+    },
+    "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },

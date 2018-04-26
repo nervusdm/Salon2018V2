@@ -7,16 +7,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-camera": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-camera@4.0.2"
-    },
-    "is_top_level": true,
-    "variables": {
-      "CAMERA_USAGE_DESCRIPTION": "the reason you want to give to scan barcodes"
-    }
-  },
   "phonegap-plugin-barcodescanner": {
     "source": {
       "type": "registry",
@@ -37,6 +27,14 @@
     "source": {
       "type": "registry",
       "id": "cordova.plugins.diagnostic"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@4.0.3"
     },
     "is_top_level": true,
     "variables": {}
