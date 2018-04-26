@@ -6,6 +6,35 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 
+document.addEventListener("deviceready", yourCallbackFunction, false);
+
+ yourCallbackFunction: function() {
+
+
+            cordova.plugins.diagnostic.requestCameraAuthorization(
+                function(status){
+
+                    console.log("Authorization request for camera use was " + (status == cordova.plugins.diagnostic.permissionStatus.GRANTED ? "granted" : "denied"));
+
+                    if (myApp.device.ios) { 
+
+                             cordova.plugins.diagnostic.isCameraRollAuthorized(function(authorized){
+                              if (!authorized) {
+                                   cordova.plugins.diagnostic.requestCameraRollAuthorization(function(granted){
+
+                                   }, function(error){
+                                      console.log("Authorization request for camera roll has error " + error.code + " - "+ err.msg);
+                                   });
+
+                              }
+                            });
+                      }
+
+                }, function(error){
+                    console.error("The following error occurred: "+error);
+                }, false
+            );  
+
 
 
 var url_projet = "https://www.hexaplus.fr/";
