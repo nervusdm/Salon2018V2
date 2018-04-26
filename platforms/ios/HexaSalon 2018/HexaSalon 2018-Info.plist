@@ -54,5 +54,7 @@
     </array>
     <key>NSCameraUsageDescription</key>
     <string>Scan des QRCODE pour le salon.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app requires photo library access to function properly.</string>
   </dict>
 </plist>

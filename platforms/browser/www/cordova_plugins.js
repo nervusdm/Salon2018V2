@@ -52,7 +52,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-camera": "4.0.3",
     "cordova-custom-config": "5.0.2",
-    "phonegap-plugin-barcodescanner": "7.1.1"
+    "phonegap-plugin-barcodescanner": "7.1.1",
+    "cordova.plugins.diagnostic": "4.0.5"
 }
 // BOTTOM OF METADATA
 });

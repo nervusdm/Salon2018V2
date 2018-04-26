@@ -19,10 +19,5 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>Scan des QRCODE pour le salon.</string>
     </edit-config>
-    <config-file mode="merge" parent="/*" target="AndroidManifest.xml">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-feature android:name="android.hardware.camera" />
-        <uses-feature android:name="android.hardware.camera.autofocus" />
-    </config-file>
     <preference name="cordova.plugins.diagnostic.modules" value="CAMERA EXTERNAL_STORAGE" />
 </widget>

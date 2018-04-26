@@ -23,6 +23,9 @@
 		1A22D33B42CA422287F6E55F /* CDVBarcodeScanner.mm in Resources */ = {isa = PBXBuildFile; fileRef = B3B12B06C8C04EF3BB669CEE /* CDVBarcodeScanner.mm */; };
 		30828D68A2934D34A217BB1A /* scannerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 587DAD0D26CC422E89DB3A57 /* scannerOverlay.xib */; };
 		CBB207FDEF3143F7B9D10F08 /* CDVBarcodeScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 645441B066C94BC4A9F42A01 /* CDVBarcodeScanner.bundle */; };
+		68806618F20B4004BBD73240 /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4A1A535B534AD9B37544AD /* Diagnostic.m */; };
+		A138467919164AE5AFB6A5B0 /* Diagnostic_Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B9D530AAB469D83C98B78 /* Diagnostic_Camera.m */; };
+		612F95851DBD45B09D043CC2 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A04D67B5B74C2FA6568F4F /* Photos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,11 @@
 		B3B12B06C8C04EF3BB669CEE /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.mm"; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		587DAD0D26CC422E89DB3A57 /* scannerOverlay.xib */ = {isa = PBXFileReference; name = "scannerOverlay.xib"; path = "scannerOverlay.xib"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = file.xib; explicitFileType = undefined; includeInIndex = 0; };
 		645441B066C94BC4A9F42A01 /* CDVBarcodeScanner.bundle */ = {isa = PBXFileReference; name = "CDVBarcodeScanner.bundle"; path = "CDVBarcodeScanner.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		4E4A1A535B534AD9B37544AD /* Diagnostic.m */ = {isa = PBXFileReference; name = "Diagnostic.m"; path = "cordova.plugins.diagnostic/Diagnostic.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7E5B9D530AAB469D83C98B78 /* Diagnostic_Camera.m */ = {isa = PBXFileReference; name = "Diagnostic_Camera.m"; path = "cordova.plugins.diagnostic/Diagnostic_Camera.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CB8CF5494705493EB0EEA15A /* Diagnostic.h */ = {isa = PBXFileReference; name = "Diagnostic.h"; path = "cordova.plugins.diagnostic/Diagnostic.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4168D15505524481BFFD92C9 /* Diagnostic_Camera.h */ = {isa = PBXFileReference; name = "Diagnostic_Camera.h"; path = "cordova.plugins.diagnostic/Diagnostic_Camera.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		12A04D67B5B74C2FA6568F4F /* Photos.framework */ = {isa = PBXFileReference; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 				A531E37338D44B8EAEFE514F /* CoreLocation.framework in Frameworks */,
 				C71A4286D2CE4A758BAB61FE /* AVFoundation.framework in Frameworks */,
 				CFA78C7A175A41F8869F8245 /* ImageIO.framework in Frameworks */,
+				612F95851DBD45B09D043CC2 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +180,7 @@
 				5B725B7D3A5F49729E64EAAC /* CoreLocation.framework */,
 				1071199F4A974F4C8E40268B /* AVFoundation.framework */,
 				6A071E1A08B5406D80C5061D /* ImageIO.framework */,
+				12A04D67B5B74C2FA6568F4F /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,6 +217,10 @@
 				037ACE406A8045D38F89E1A2 /* CDVJpegHeaderWriter.h */,
 				675310137860435EB0165DB7 /* CDVExif.h */,
 				B3B12B06C8C04EF3BB669CEE /* CDVBarcodeScanner.mm */,
+				4E4A1A535B534AD9B37544AD /* Diagnostic.m */,
+				7E5B9D530AAB469D83C98B78 /* Diagnostic_Camera.m */,
+				CB8CF5494705493EB0EEA15A /* Diagnostic.h */,
+				4168D15505524481BFFD92C9 /* Diagnostic_Camera.h */,
 			);
 			name = Plugins;
 			path = "HexaSalon 2018/Plugins";
@@ -344,6 +358,8 @@
 				2A9AF65307C64602AE58B54E /* CDVCamera.m in Sources */,
 				3EDDB90573294372909ED04E /* CDVJpegHeaderWriter.m in Sources */,
 				1A22D33B42CA422287F6E55F /* CDVBarcodeScanner.mm in Resources */,
+				68806618F20B4004BBD73240 /* Diagnostic.m in Sources */,
+				A138467919164AE5AFB6A5B0 /* Diagnostic_Camera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

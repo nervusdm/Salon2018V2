@@ -28,6 +28,14 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="Diagnostic">
+        <param name="ios-package" value="Diagnostic" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Camera">
+        <param name="ios-package" value="Diagnostic_Camera" />
+        <param name="onload" value="true" />
+    </feature>
     <name>HexaSalon 2018</name>
     <description>L'application du salon Hexa Plus Santé de Barcelone 2018</description>
     <description>
@@ -47,11 +55,6 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>Scan des QRCODE pour le salon.</string>
     </edit-config>
-    <config-file mode="merge" parent="/*" target="AndroidManifest.xml">
-        <uses-permission android:name="android.permission.CAMERA" />
-        <uses-feature android:name="android.hardware.camera" />
-        <uses-feature android:name="android.hardware.camera.autofocus" />
-    </config-file>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="1024" src="res/icons/ios/icon-1024.png" width="1024" />

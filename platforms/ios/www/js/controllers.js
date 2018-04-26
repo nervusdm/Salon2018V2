@@ -29,6 +29,38 @@ $scope.scanBarcode = function($scope)
 {
 //alert("Merci d'accepter l'application à utiliser l'appareil photo pour scanner le qrCode !!")
 
+
+cordova.plugins.diagnostic.getCameraAuthorizationStatus(
+    function(status){
+        if(status === cordova.plugins.diagnostic.permissionStatus.GRANTED){
+            alert("Camera use is authorized");
+            cordova.plugins.barcodeScanner.scan(
+               function (result) {
+                   alert("We got a barcode\n" +
+                         "Result: " + result.text + "\n" +
+                         "Format: " + result.format + "\n" +
+                         "Cancelled: " + result.cancelled);
+               },
+               function (error) {
+                   alert("Scanning failed: " + error);
+               }
+            );
+
+
+
+        }
+    }, function(error){
+        console.error("The following error occurred: "+error);
+        alert('ERREUR diagnostic camera');
+    }, {
+        externalStorage: false
+    }
+);
+
+
+
+
+
 try
 {
 $cordovaBarcodeScanner.scan().then(

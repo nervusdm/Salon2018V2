@@ -49,11 +49,27 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-android-permissions.Permissions",
-    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-    "pluginId": "cordova-plugin-android-permissions",
-    "clobbers": [
-      "cordova.plugins.permissions"
+    "id": "cordova.plugins.diagnostic.Diagnostic",
+    "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "merges": [
+      "cordova.plugins.diagnostic"
+    ]
+  },
+  {
+    "id": "cordova.plugins.diagnostic.Diagnostic_Camera",
+    "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.camera.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "merges": [
+      "cordova.plugins.diagnostic.camera"
+    ]
+  },
+  {
+    "id": "cordova.plugins.diagnostic.Diagnostic_External_Storage",
+    "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.external_storage.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "merges": [
+      "cordova.plugins.diagnostic.external_storage"
     ]
   }
 ];
@@ -65,7 +81,7 @@ module.exports.metadata =
   "cordova-plugin-camera": "4.0.3",
   "cordova-custom-config": "5.0.2",
   "phonegap-plugin-barcodescanner": "7.1.1",
-  "cordova-plugin-android-permissions": "1.0.0"
+  "cordova.plugins.diagnostic": "4.0.5"
 };
 // BOTTOM OF METADATA
 });

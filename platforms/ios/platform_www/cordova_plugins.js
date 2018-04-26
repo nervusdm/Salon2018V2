@@ -47,6 +47,22 @@ module.exports = [
     "clobbers": [
       "cordova.plugins.barcodeScanner"
     ]
+  },
+  {
+    "id": "cordova.plugins.diagnostic.Diagnostic",
+    "file": "plugins/cordova.plugins.diagnostic/www/ios/diagnostic.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "merges": [
+      "cordova.plugins.diagnostic"
+    ]
+  },
+  {
+    "id": "cordova.plugins.diagnostic.Diagnostic_Camera",
+    "file": "plugins/cordova.plugins.diagnostic/www/ios/diagnostic.camera.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "merges": [
+      "cordova.plugins.diagnostic.camera"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -56,7 +72,8 @@ module.exports.metadata =
   "cordova-plugin-ionic-keyboard": "2.0.5",
   "cordova-plugin-camera": "4.0.3",
   "cordova-custom-config": "5.0.2",
-  "phonegap-plugin-barcodescanner": "7.1.1"
+  "phonegap-plugin-barcodescanner": "7.1.1",
+  "cordova.plugins.diagnostic": "4.0.5"
 };
 // BOTTOM OF METADATA
 });
