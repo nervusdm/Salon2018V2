@@ -13,38 +13,6 @@
     <feature name="Keyboard">
         <param name="android-package" onload="true" value="io.ionic.keyboard.IonicKeyboard" />
     </feature>
-    <feature name="Diagnostic">
-        <param name="android-package" value="cordova.plugins.Diagnostic" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Location">
-        <param name="android-package" value="cordova.plugins.Diagnostic_Location" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Bluetooth">
-        <param name="android-package" value="cordova.plugins.Diagnostic_Bluetooth" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Wifi">
-        <param name="android-package" value="cordova.plugins.Diagnostic_Wifi" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Camera">
-        <param name="android-package" value="cordova.plugins.Diagnostic_Camera" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_Notifications">
-        <param name="android-package" value="cordova.plugins.Diagnostic_Notifications" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_NFC">
-        <param name="android-package" value="cordova.plugins.Diagnostic_NFC" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="Diagnostic_External_Storage">
-        <param name="android-package" value="cordova.plugins.Diagnostic_External_Storage" />
-        <param name="onload" value="true" />
-    </feature>
     <name>HexaSalon 2018</name>
     <description>L'application du salon Hexa Plus Santé de Barcelone 2018</description>
     <description>

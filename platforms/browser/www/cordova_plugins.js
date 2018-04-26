@@ -50,9 +50,9 @@ module.exports.metadata =
 {
     "cordova-plugin-ionic-keyboard": "2.0.5",
     "cordova-plugin-whitelist": "1.3.3",
-    "cordova.plugins.diagnostic": "4.0.5",
     "cordova-plugin-camera": "4.0.3",
-    "phonegap-plugin-barcodescanner": "7.1.1"
+    "phonegap-plugin-barcodescanner": "7.1.1",
+    "cordova-custom-config": "5.0.2"
 }
 // BOTTOM OF METADATA
 });

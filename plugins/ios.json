@@ -13,13 +13,13 @@
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
-    "cordova.plugins.diagnostic": {
-      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
-    },
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
     "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
+    },
+    "cordova-custom-config": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },
