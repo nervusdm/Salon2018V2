@@ -23,10 +23,10 @@
             "cordova-plugin-whitelist": {},
             "cordova-plugin-ionic-keyboard": {},
             "cordova-plugin-camera": {},
+            "cordova-custom-config": {},
             "phonegap-plugin-barcodescanner": {
                 "ANDROID_SUPPORT_V4_VERSION": "27.+"
-            },
-            "cordova-custom-config": {}
+            }
         },
         "platforms": [
             "ios"

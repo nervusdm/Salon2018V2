@@ -16,10 +16,10 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
-    "phonegap-plugin-barcodescanner": {
+    "cordova-custom-config": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
-    "cordova-custom-config": {
+    "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },
