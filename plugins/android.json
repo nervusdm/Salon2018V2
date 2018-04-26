@@ -19,6 +19,9 @@
     "phonegap-plugin-barcodescanner": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },
   "dependent_plugins": {}

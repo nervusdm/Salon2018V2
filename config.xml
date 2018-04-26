@@ -62,8 +62,9 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="^7.1.0">
         <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
     </plugin>
-
-<feature name="http://api.phonegap.com/1.0/camera" />
-<feature name="http://api.phonegap.com/1.0/file" />
+    <feature name="http://api.phonegap.com/1.0/camera" />
+    <feature name="http://api.phonegap.com/1.0/file" />
+    <plugin name="cordova.plugins.diagnostic" spec="^4.0.5" />
+    <preference name="cordova.plugins.diagnostic.modules" value="CAMERA EXTERNAL_STORAGE" />
 
 </widget>
