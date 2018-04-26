@@ -23,7 +23,9 @@
             "cordova-plugin-camera": {
                 "CAMERA_USAGE_DESCRIPTION": "the reason you want to give to scan barcodes"
             },
-            "phonegap-plugin-barcodescanner": {},
+            "phonegap-plugin-barcodescanner": {
+                "ANDROID_SUPPORT_V4_VERSION": "27.+"
+            },
             "cordova-plugin-ionic-keyboard": {}
         },
         "platforms": [
