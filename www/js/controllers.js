@@ -31,25 +31,6 @@ $scope.scanBarcode = function($scope)
 
 try
 {
-
-
-let permissions = cordova.plugins.permissions;
-permissions.checkPermission(permissions.CAMERA, (status) => {
- if (!status.hasPermission) {
-    permissions.requestPermission(
-      permissions.CAMERA,
-      (status) => {
-        if (!status.hasPermission) {
-          errorCallback();
-        } else {
-          this.launchQRCodeScan();
-        }
-      },
-      errorCallback);
-  } else {
-  
-
-
 $cordovaBarcodeScanner.scan().then(
   function (result) {
     var tab= {code:result.text};
@@ -100,11 +81,6 @@ $cordovaBarcodeScanner.scan().then(
           disableSuccessBeep: false // iOS
         }
         );
-  
-  }
-}, errorCallback);
-
-
 
 }
 catch(e)

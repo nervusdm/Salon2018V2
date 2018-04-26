@@ -43,14 +43,6 @@ module.exports = [
         "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
         "pluginId": "phonegap-plugin-barcodescanner",
         "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
-        "id": "cordova-plugin-android-permissions.Permissions",
-        "pluginId": "cordova-plugin-android-permissions",
-        "clobbers": [
-            "cordova.plugins.permissions"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -60,8 +52,7 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-camera": "4.0.3",
     "cordova-custom-config": "5.0.2",
-    "phonegap-plugin-barcodescanner": "7.1.1",
-    "cordova-plugin-android-permissions": "1.0.0"
+    "phonegap-plugin-barcodescanner": "7.1.1"
 }
 // BOTTOM OF METADATA
 });

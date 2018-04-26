@@ -48,6 +48,24 @@
           "NSRemindersUsageDescription": [],
           "NSMotionUsageDescription": []
         }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" />",
+              "count": 1
+            }
+          ]
+        }
       }
     }
   },
@@ -65,9 +83,6 @@
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     },
     "phonegap-plugin-barcodescanner": {
-      "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
-    },
-    "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "com.hexaplus.hexasalon646222"
     }
   },
@@ -120,14 +135,6 @@
       "clobbers": [
         "cordova.plugins.barcodeScanner"
       ]
-    },
-    {
-      "id": "cordova-plugin-android-permissions.Permissions",
-      "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
-      "pluginId": "cordova-plugin-android-permissions",
-      "clobbers": [
-        "cordova.plugins.permissions"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -135,7 +142,6 @@
     "cordova-plugin-ionic-keyboard": "2.0.5",
     "cordova-plugin-camera": "4.0.3",
     "cordova-custom-config": "5.0.2",
-    "phonegap-plugin-barcodescanner": "7.1.1",
-    "cordova-plugin-android-permissions": "1.0.0"
+    "phonegap-plugin-barcodescanner": "7.1.1"
   }
 }
