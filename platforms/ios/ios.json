@@ -39,12 +39,8 @@
         "parents": {
           "NSCameraUsageDescription": [
             {
-              "xml": "<string>This app requires camera access to function properly.</string>",
-              "count": 1
-            },
-            {
               "xml": "<string>Scan des QRCODE pour le salon.</string>",
-              "count": 1,
+              "count": 2,
               "mode": "merge",
               "id": "config.xml"
             }

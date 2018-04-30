@@ -27,8 +27,9 @@ var translate = $filter('translate');
 
 $scope.scanBarcode = function($scope)
 {
-//alert("Merci d'accepter l'application à utiliser l'appareil photo pour scanner le qrCode !!")
 
+/*
+alert("Merci d'accepter l'application à utiliser l'appareil photo pour scanner le qrCode !!")
 
 cordova.plugins.diagnostic.getCameraAuthorizationStatus(
     function(status){
@@ -58,8 +59,8 @@ cordova.plugins.diagnostic.getCameraAuthorizationStatus(
 );
 
 
-
-
+return;
+*/
 
 try
 {

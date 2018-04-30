@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hexaplus.hexasalon646222" version="0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.hexaplus.hexasalon646222" version="0.99" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>HexaSalon 2018</name>
     <description>L'application du salon Hexa Plus Santé de Barcelone 2018</description>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Application du salon
     </description>
     <author email="d-masson@hexaplus.fr" href="https://www.hexaplus.fr">
         Apache Cordova Team
@@ -53,9 +53,9 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>Scan des QRCODE pour le salon.</string>
     </edit-config>
-<plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova.plugins.diagnostic" spec="~4.0.3" />
     <plugin name="cordova-plugin-barcodescanner" spec="~0.7.4" />
-    <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="^7.1.0" />
 </widget>

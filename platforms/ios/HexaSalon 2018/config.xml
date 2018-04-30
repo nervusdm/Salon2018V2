@@ -88,5 +88,4 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CameraUsesGeolocation" value="false" />
-    <preference name="cordova.plugins.diagnostic.modules" value="CAMERA EXTERNAL_STORAGE" />
 </widget>
